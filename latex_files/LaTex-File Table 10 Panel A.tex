@@ -1,0 +1,65 @@
+
+\documentclass[11pt]{article}
+\setlength{\pdfpagewidth}{8.5in} \setlength{\pdfpageheight}{11in}
+
+\usepackage{multirow,array}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{amsfonts}
+\usepackage{pdflscape}
+\usepackage{longtable}
+\usepackage{xspace}
+\usepackage{bibentry}
+\usepackage{tikz}
+\usepackage{latexsym}
+\usepackage[hyphens]{url}
+\usetikzlibrary{calc}
+\usepackage{float}
+\usepackage[demo]{graphicx}
+
+\renewcommand{\arraystretch}{1.2}
+
+\begin{document}
+
+\begin{landscape}
+
+
+\begin{table}[h] \small
+	\centering
+\caption{ \textbf{Propensity-Score/Kernel-Density/Nearest-Neighbor Matching} }  
+\begin{tabular}{l*{5}{c}}
+	\hline\hline \\[-1.8ex]
+	\textbf{Panel A:} & \multicolumn{5}{c}{ \textbf{\textit{Absolute change in POLITY2 dummy}} } \\
+	&  No controls & Controls & Propensity Score & Nearest Neighbor &  Kernel Density \\
+	\\[-1.8ex] \hline \\[-1.8ex] 
+	\textbf{Success}     &    .0978712&    .1013593&    .0999941&    .1046366&     .097716\\
+	Std. Error   &    .0423318&    .0415432&    .0416009&     .063423&    .0441874\\
+	\textbf{Failure}     &    .0063008&    .0053657&    .0050712&   -.0178862&    .0055095\\
+	Std. Error   &    .0178104&    .0168508&    .0166843&    .0315017&    .0158599\\
+	\hline \\[-1.8ex] 
+	\textbf{Panel B:} & \multicolumn{5}{c}{ \textbf{\textit{Directional change in POLITY2 dummy}} } \\
+	&  No controls & Controls & Propensity Score & Nearest Neighbor &  Kernel Density \\
+	\hline \\[-1.8ex]
+	\textbf{Success}     &    .0656007&    .0597167&    .0592815&    .0701754&    .0659623\\
+	Std. Error   &    .0471437&     .044442&     .044316&     .061474&    .0503945\\
+	\textbf{Failure}     &   -.0167699&   -.0192466&    -.019221&   -.0061345&   -.0171883\\
+	Std. Error   &    .0193887&    .0194316&    .0194736&    .0300749&    .0174507\\
+	\hline \\[-1.8ex] 
+	\textbf{Panel C:} & \multicolumn{5}{c}{ \textbf{\textit{Percent regular leader transitions 1–20 years out}} } \\
+	&  No controls & Controls & Propensity Score & Nearest Neighbor &  Kernel Density \\
+	\hline \\[-1.8ex]
+	\textbf{Success}     &    .0713242&    .1149701&    .1116072&    .2190714&    .0719706\\
+	Std. Error   &    .0402376&    .0427156&    .0418721&    .0953523&    .0382476\\
+	\textbf{Failure}     &   -.0713396&    -.039264&   -.0404856&    .0231289&   -.0708359\\
+	Std. Error   &    .0409636&     .024378&    .0242394&    .0530761&    .0373275\\
+	\hline \\[-1.8ex] 
+	\multicolumn{6}{l}{\footnotesize \textit{t} statistics in parentheses}\\
+	\hline\hline
+\end{tabular}
+\end{table}
+
+\end{landscape}
+
+\end{document}
